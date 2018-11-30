@@ -1,0 +1,20 @@
+class Solution:
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if x < 0:
+            y = -1*int(str(-x)[::-1])
+        else:
+            y = int(str(x)[::-1])
+        if (y>(2**32/2-1) or y<(-(2**32/2))):
+            y=0
+        return y
+        
+        
+x = -123
+
+s = Solution()
+y = s.reverse(x)
+print(y)
